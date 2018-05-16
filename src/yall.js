@@ -31,8 +31,7 @@ const yallLoad = function(element, env) {
       if (env.asyncDecodeSupport === true) {
         newImageElement.decode().then(() => {
           newImageElement.alt = element.alt;
-          newImageElement.width = element.width;
-          newImageElement.height = element.height;
+          newImageElement.className = element.className;
           element.replaceWith(newImageElement);
         });
       } else {
